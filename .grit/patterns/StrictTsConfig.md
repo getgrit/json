@@ -9,9 +9,11 @@ Adds `"strict": true, "allowJs": true, "checkJs": false` from a tsconfig's `comp
 tags: #js, #ts
 
 ```grit
+engine marzano(0.1)
 language json
+
 json_pair(key="compilerOptions", value=$val) where {
-    $val <: json_object(properties=$options)
+    <!-- $val <: json_object(properties=$options)
     $newOptions = $options
 
     $options <: maybe contains json_pair(key="noImplicitAny", value=`false` => `true`)
@@ -40,7 +42,7 @@ json_pair(key="compilerOptions", value=$val) where {
     } else {
         $newOptions = [...$newOptions, json_pair(key=`"checkJs"`, value=`false`)]
         $val => json_object(properties=$newOptions)
-    }
+    } -->
 }
 ```
 
@@ -69,10 +71,10 @@ json_pair(key="compilerOptions", value=$val) where {
     "strict": true,
     "allowJs": true,
     "checkJs": false
-   },
+  },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]
- }
+}
 ```
 
 ## Handles redundant options
@@ -116,14 +118,13 @@ json_pair(key="compilerOptions", value=$val) where {
     "strict": true,
     "allowJs": true,
     "checkJs": false
-   },
+  },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]
- }
+}
 ```
 
 ## Handles existing strict
-
 
 ```json
 {
@@ -186,14 +187,14 @@ json_pair(key="compilerOptions", value=$val) where {
       "@/*": ["./*"]
     },
     "checkJs": false
-   },
+  },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
- }
-
+}
 ```
 
 ## Bugfix $decl <: false
+
 ```json
 {
   "extends": "./tsconfig.json",
@@ -218,8 +219,8 @@ json_pair(key="compilerOptions", value=$val) where {
     "allowJs": true,
     "strict": true,
     "checkJs": false
-   },
+  },
   "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],
   "include": ["**/*.ts"]
- }
+}
 ```
