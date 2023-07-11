@@ -93,13 +93,6 @@ pair(key=`"compilerOptions"`, $value) where {
     "outDir": "../../dist/out-tsc",
     "types": ["node"],
     "foo": "bar",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "strictBindCallApply": false,
-    "strictNullChecks": false,
-    "strictFunctionTypes": false,
-    "strictPropertyInitialization": false,
     "baz": "raz"
   },
   "exclude": ["**/*.spec.ts"],
