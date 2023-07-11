@@ -72,12 +72,9 @@ pair(key=`"compilerOptions"`, $value) where {
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
+    "strict": true, "allowJs": true, "checkJs": false, "outDir": "../../dist/out-tsc",
     "types": ["node"],
-    "foo": "bar",
-    "strict": true,
-    "allowJs": true,
-    "checkJs": false
+    "foo": "bar"
   },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]
@@ -104,20 +101,10 @@ pair(key=`"compilerOptions"`, $value) where {
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../dist/out-tsc",
+    "strict": true, "allowJs": true, "checkJs": false, "outDir": "../../dist/out-tsc",
     "types": ["node"],
     "foo": "bar",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "strictBindCallApply": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "baz": "raz",
-    "strict": true,
-    "allowJs": true,
-    "checkJs": false
+    "baz": "raz"
   },
   "exclude": ["**/*.spec.ts"],
   "include": ["**/*.ts"]
@@ -162,7 +149,7 @@ pair(key=`"compilerOptions"`, $value) where {
 ```json
 {
   "compilerOptions": {
-    "target": "es5",
+    "checkJs": false, "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -185,8 +172,7 @@ pair(key=`"compilerOptions"`, $value) where {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
-    },
-    "checkJs": false
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
@@ -213,12 +199,12 @@ pair(key=`"compilerOptions"`, $value) where {
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "strict": true,
+    "checkJs": false,
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
     "types": ["node", "express"],
-    "allowJs": true,
-    "strict": true,
-    "checkJs": false
+    "allowJs": true
   },
   "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts"],
   "include": ["**/*.ts"]
