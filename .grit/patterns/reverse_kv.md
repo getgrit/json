@@ -1,12 +1,14 @@
 ---
-title: Find key-value pairs
+title: Reverse key-value pairs
 ---
+
+This pattern reverses key-value pairs when the value is a string.
 
 ```grit
 engine marzano(0.1)
 language json
 
-`$key: "$value"`
+`$key: $value` => `$value: $key` where { $value <: string() }
 ```
 
 ## Matches a key-value pair
