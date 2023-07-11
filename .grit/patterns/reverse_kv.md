@@ -14,9 +14,9 @@ language json
 ## Matches a key-value pair
 
 ```json
-{ "foo": "5", "bar": "buz" }
+{ "foo": 5, "bar": "buz" }
 ```
 
 ```json
-{ "foo": "5", "bar": "buz" }
+{ "foo": 5, "buz": "bar" }
 ```
