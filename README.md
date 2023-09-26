@@ -1,4 +1,4 @@
-# JavaScript Grit Patterns
+# JSON Grit Patterns
 
 This repository contains curated Grit patterns for JSON.
 
